@@ -1,6 +1,7 @@
 name: ExtraGear
 version: ${project.version}
 author: TheBusyBiscuit
+description: 黏液科技附加 更多裝備 繁體翻譯版.
 depend: [Slimefun]
 
 api-version: 1.14

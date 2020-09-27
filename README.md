@@ -1,20 +1,22 @@
-# ExtraGear
-ExtraGear is one of the oldest Slimefun addons in existence.<br>
-The features are pretty simple, it adds new weapons and armor sets for various Slimefun ingots/alloys.
-These weapons and armor sets also come with enchantments!
+# 更多裝備
+更多裝備是現有的最古老Slimefun附加之一.<br>
+功能非常簡單,它為所有Slimefun的錠/合金新增新的武器和護甲.<br>
+這些武器與護甲也會自帶附魔!
 
-## Download ExtraGear
-You can download ExtraGear right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ExtraGear/master/)
+[官方原碼連結](https://github.com/TheBusyBiscuit/ExtraGear)
 
+## 下載更多裝備
+繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/ExtraGear/master)<br>
+官方開發版: [開發版構建頁面](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ExtraGear/master/)
 <p align="center">
-  <a href="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ExtraGear/master/">
-    <img src="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/ExtraGear/master/badge.svg" alt="Build Server"/>
+  <a href="https://xmikux.github.io/builds/xMikux/ExtraGear/master/">
+    <img src="https://xmikux.github.io/builds/xMikux/ExtraGear/master/badge.svg" alt="構建伺服器"/>
   </a>
 </p>
 
 ## Discord
-You can find Slimefun's community on Discord!
-Click the badge down below to join the server for suggestions/questions or other discussions about this plugin.
+您可以在Discord上找到官方SlimeFun社區!
+點擊下面的徵標來加入伺服器.
 <p align="center">
   <a href="https://discord.gg/fsD4Bkh">
     <img src="https://img.shields.io/discord/565557184348422174?color=7289DA&label=Discord&style=for-the-badge" alt="Discord Invite"/>
