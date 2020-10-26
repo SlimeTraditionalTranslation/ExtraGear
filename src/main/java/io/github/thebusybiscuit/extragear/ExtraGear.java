@@ -3,7 +3,7 @@ package io.github.thebusybiscuit.extragear;
 import java.util.Arrays;
 import java.util.List;
 
-import org.bstats.bukkit.Metrics;
+//import org.bstats.bukkit.Metrics;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
@@ -29,7 +29,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
 
-        new Metrics(this, 6469);
+        //new Metrics(this, 6469);
 
         category = new Category(new NamespacedKey(this, "items"), new CustomItem(Material.DIAMOND_SWORD, "&6更多裝備"), 1);
 

@@ -3,7 +3,8 @@
 功能非常簡單,它為所有Slimefun的錠/合金新增新的武器和護甲.<br>
 這些武器與護甲也會自帶附魔!
 
-[官方原碼連結](https://github.com/TheBusyBiscuit/ExtraGear)
+此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
+[原作者連結](https://github.com/TheBusyBiscuit/ExtraGear)
 
 ## 下載更多裝備
 繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/ExtraGear/master)<br>
