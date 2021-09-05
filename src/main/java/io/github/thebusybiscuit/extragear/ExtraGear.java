@@ -36,7 +36,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
             new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/ExtraGear/master").start();
         }*/
 
-        new Metrics(this, 6469);
+        //new Metrics(this, 6469);
 
         itemGroup = new ItemGroup(new NamespacedKey(this, "items"), new CustomItemStack(Material.DIAMOND_SWORD, "&6更多裝備"), 1);
 
@@ -83,7 +83,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
         registerArmor(ArmorSet.IRON, "COBALT", "鈷", SlimefunItems.COBALT_INGOT, Arrays.asList(new Pair<>(Enchantment.PROTECTION_ENVIRONMENTAL, 7), new Pair<>(Enchantment.DURABILITY, 7)));
     }
 
-    private void registerSword(Material type, String component, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
+    private void registerSword(Material type, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
         SlimefunItemStack is = new SlimefunItemStack(component + "_SWORD", type, "&r" + ChatUtils.humanize(component) + "劍");
 
         for (Pair<Enchantment, Integer> enchantment : enchantments) {
@@ -100,7 +100,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
         research.register();
     }
 
-    private void registerArmor(ArmorSet armorset, String component, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
+    private void registerArmor(ArmorSet armorset, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
         String humanizedComponent = ChatUtils.humanize(component);
         SlimefunItemStack[] armor = { new SlimefunItemStack(component + "_HELMET", armorset.getHelmet(), "&f" + humanizedComponent + "頭盔"),
                 new SlimefunItemStack(component + "_CHESTPLATE", armorset.getChestplate(), "&f" + humanizedComponent + "胸甲"),
