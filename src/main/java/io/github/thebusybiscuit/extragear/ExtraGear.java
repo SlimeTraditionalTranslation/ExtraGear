@@ -30,16 +30,16 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-		Config cfg = new Config(this);
-		
+        Config cfg = new Config(this);
+
         /*if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
             new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/ExtraGear/master").start();
         }*/
 
-		//new Metrics(this, 6469);
-		
+        new Metrics(this, 6469);
+
         itemGroup = new ItemGroup(new NamespacedKey(this, "items"), new CustomItemStack(Material.DIAMOND_SWORD, "&6更多裝備"), 1);
-		
+
         registerSword(Material.IRON_SWORD, "COPPER", "銅", SlimefunItems.COPPER_INGOT, Arrays.asList(new Pair<>(Enchantment.DAMAGE_UNDEAD, 2)));
         registerArmor(ArmorSet.LEATHER, "COPPER", "銅", SlimefunItems.COPPER_INGOT, Arrays.asList(new Pair<>(Enchantment.PROTECTION_EXPLOSIONS, 2)));
 
@@ -83,8 +83,8 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
         registerArmor(ArmorSet.IRON, "COBALT", "鈷", SlimefunItems.COBALT_INGOT, Arrays.asList(new Pair<>(Enchantment.PROTECTION_ENVIRONMENTAL, 7), new Pair<>(Enchantment.DURABILITY, 7)));
     }
 
-    private void registerSword(Material type, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
-        SlimefunItemStack is = new SlimefunItemStack(component + "_SWORD", type, "&r" + ChatUtils.humanize(itemnames) + "劍");
+    private void registerSword(Material type, String component, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
+        SlimefunItemStack is = new SlimefunItemStack(component + "_SWORD", type, "&r" + ChatUtils.humanize(component) + "劍");
 
         for (Pair<Enchantment, Integer> enchantment : enchantments) {
             is.addUnsafeEnchantment(enchantment.getFirstValue(), enchantment.getSecondValue());
@@ -95,17 +95,17 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
 
         researchId++;
 
-        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_sword"), researchId, ChatUtils.humanize(itemnames) + "劍", 3);
+        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_sword"), researchId, ChatUtils.humanize(component) + "劍", 3);
         research.addItems(slimefunItem);
         research.register();
     }
 
-    private void registerArmor(ArmorSet armorset, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
-        String humanizeditemnames = ChatUtils.humanize(itemnames);
-        SlimefunItemStack[] armor = { new SlimefunItemStack(component + "_HELMET", armorset.getHelmet(), "&f" + humanizeditemnames + "頭盔"),
-                new SlimefunItemStack(component + "_CHESTPLATE", armorset.getChestplate(), "&f" + humanizeditemnames + "胸甲"),
-                new SlimefunItemStack(component + "_LEGGINGS", armorset.getLeggings(), "&f" + humanizeditemnames + "護腿"),
-                new SlimefunItemStack(component + "_BOOTS", armorset.getBoots(), "&f" + humanizeditemnames + "靴子") };
+    private void registerArmor(ArmorSet armorset, String component, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
+        String humanizedComponent = ChatUtils.humanize(component);
+        SlimefunItemStack[] armor = { new SlimefunItemStack(component + "_HELMET", armorset.getHelmet(), "&f" + humanizedComponent + "頭盔"),
+                new SlimefunItemStack(component + "_CHESTPLATE", armorset.getChestplate(), "&f" + humanizedComponent + "胸甲"),
+                new SlimefunItemStack(component + "_LEGGINGS", armorset.getLeggings(), "&f" + humanizedComponent + "護腿"),
+                new SlimefunItemStack(component + "_BOOTS", armorset.getBoots(), "&f" + humanizedComponent + "靴子") };
 
         for (Pair<Enchantment, Integer> enchantment : enchantments) {
             for (ItemStack is : armor) {
@@ -127,7 +127,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
 
         researchId++;
 
-        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_armor"), researchId, humanizeditemnames + "盔甲", 5);
+        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_armor"), researchId, humanizedComponent + "盔甲", 5);
         research.addItems(helmet, chestplate, leggings, boots);
         research.register();
     }
