@@ -4,5 +4,6 @@ rules:
     upstream: TheBusyBiscuit:master
     mergeMethod: merge
     conflictReviewers:
-      - xMikux
       - weiii-joe
+      - xhuanfux
+      - xMikux

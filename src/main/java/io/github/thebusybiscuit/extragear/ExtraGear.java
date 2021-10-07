@@ -84,7 +84,7 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerSword(Material type, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
-        SlimefunItemStack is = new SlimefunItemStack(component + "_SWORD", type, "&r" + ChatUtils.humanize(component) + "劍");
+        SlimefunItemStack is = new SlimefunItemStack(component + "_SWORD", type, "&r" + ChatUtils.humanize(itemnames) + "劍");
 
         for (Pair<Enchantment, Integer> enchantment : enchantments) {
             is.addUnsafeEnchantment(enchantment.getFirstValue(), enchantment.getSecondValue());
@@ -95,13 +95,13 @@ public class ExtraGear extends JavaPlugin implements SlimefunAddon {
 
         researchId++;
 
-        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_sword"), researchId, ChatUtils.humanize(component) + "劍", 3);
+        Research research = new Research(new NamespacedKey(this, component.toLowerCase() + "_sword"), researchId, ChatUtils.humanize(itemnames) + "劍", 3);
         research.addItems(slimefunItem);
         research.register();
     }
 
     private void registerArmor(ArmorSet armorset, String component, String itemnames, ItemStack item, List<Pair<Enchantment, Integer>> enchantments) {
-        String humanizedComponent = ChatUtils.humanize(component);
+        String humanizedComponent = ChatUtils.humanize(itemnames);
         SlimefunItemStack[] armor = { new SlimefunItemStack(component + "_HELMET", armorset.getHelmet(), "&f" + humanizedComponent + "頭盔"),
                 new SlimefunItemStack(component + "_CHESTPLATE", armorset.getChestplate(), "&f" + humanizedComponent + "胸甲"),
                 new SlimefunItemStack(component + "_LEGGINGS", armorset.getLeggings(), "&f" + humanizedComponent + "護腿"),
